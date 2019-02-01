@@ -68,6 +68,12 @@ class PassGenie extends Component {
         symbold: 2
     }
 
+    generatePassword() {
+        var pwdChars = 'BASESTRING';
+        var pwdLen = 10;
+        return Array(pwdLen).fill(pwdChars).map(function(x) { return x[Math.floor(Math.random() * x.length)] }).join('');
+    }
+
     render() {
         return (
             <Wrapper>
